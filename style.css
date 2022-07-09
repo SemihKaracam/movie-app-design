@@ -1,0 +1,317 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+    height: 60px;
+    z-index: 100;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 10px 50px;
+    color: white;
+}
+
+.logo{
+    font-family: 'Sen', sans-serif;
+    font-family: 400;
+    color: #E50914;
+    font-size: 30px;
+    flex: 1;
+    margin-right: 50px;
+}
+
+
+.nav-center{
+    flex: 5;
+}
+
+
+.nav-center ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-center ul li{
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 30px;
+}
+
+.theme-change{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    gap: 10px;
+    background-color: white;
+    padding: 3px;
+    position: relative;
+}
+
+.toggle-icon{
+    color: goldenrod;
+    font-size: 20px;
+}
+
+.toggle-ball{
+    position: absolute;
+    cursor: pointer;
+    transform: translateX(0px);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+
+.profile{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.profile-pic{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+.sidebar{
+    display: flex;
+    position: fixed;
+    z-index: 1005;
+    top: 0px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    gap: 40px;
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+.left-menu-icon{
+
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.featured-movie{
+    height: 60vh;
+    margin-left: 50px;
+    background-color: #E50914;
+    padding: 50px;
+    background-image: url('img/f-1.jpg'),linear-gradient(to bottom, rgba(0,0,0,0), #151515); 
+    background-blend-mode: multiply;
+}
+
+.dark{
+    background-image: url('img/f-2.jpg'),linear-gradient(to bottom, rgba(0,0,0,0), #151515); 
+    background-blend-mode: unset;
+}
+
+
+.featured-movie-info{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+    min-width: 500px;
+    width: 40%;
+    
+}
+.featured-button{
+    min-width: 100px;
+    width: 100px;
+    min-width: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: lightgreen;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+.featured-info-img{
+    width: 200px;
+}
+
+.featured-movie-img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.movies-container{
+    
+    min-height: 100vh;
+    background-color: #151515;
+    padding-bottom: 20px;
+    color: white;
+    
+}
+
+.movie-list-container{
+    padding-right: 30px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    padding-left:80px;
+}
+
+.movie-list-container h3{
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+
+.movie-list{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transform: translateX(0);
+    transition: all 1s ease;
+}
+
+.movie-list-wrapper{
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.movie{
+    position: relative;
+    cursor: pointer;
+}
+
+.movie-img{
+    min-width: 200px;
+    width: 330px;
+    border-radius: 30px;
+    transition: 1s all ease;
+    height: 220px;
+    object-fit: cover;
+}
+
+
+.movie-info{
+    padding: 5px;
+    color: black;
+    background-color: gray;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 200px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+
+}
+
+.movie:hover .movie-info
+{
+    opacity: 1;
+}
+
+.movie:hover .movie-img{
+    transform: scale(1.1);
+}
+
+.movie-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+.movie-desc{
+    margin: 10px 0px;
+}
+
+.movie-info button{
+    padding: 6px 12px;
+    background-color: #4dbf00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.arrow{
+    color: lightgray;
+    font-size: 100px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10000;
+    opacity: 0.5;
+    top:60px;
+    bottom: 0;
+}
+
+
+.arrow-left{
+    left: 0px;
+    
+}
+
+.arrow-right{
+    right: 0px;
+}
+
+
+
+/* TOGGLE ACTIVE */
+
+.navbar.active{
+    background-color: white;
+    color: black;
+}
+
+
+.theme-change.active{
+    background-color: white;
+}
+
+.toggle-ball.active{
+    background-color: black;
+    transform: translateX(28px);
+
+}
+
+
+.movies-container.active{
+    background-color: white;
+    color: black;
+}
+
+
+.sidebar.active{
+    background-color: white;
+    color: black;
+}
+
+
+
+/* RESPONSIVE */
+
+
+@media only screen and (max-width: 940px){
+    .nav-center{
+        display: none;
+    }
+}
